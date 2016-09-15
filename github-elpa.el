@@ -75,6 +75,7 @@ If not throw error."
     (git-commit "[github-elpa] Update archive"
                 github-elpa-archive-dir)))
 
+;;;###autoload
 (defun github-elpa-build ()
   "Github elpa build."
   (let ((package-build-working-dir
@@ -88,6 +89,7 @@ If not throw error."
     (make-directory package-build-archive-dir t)
     (package-build-all)))
 
+;;;###autoload
 (defun github-elpa-commit ()
   "Github elpa commit."
   (let ((package-build-working-dir
