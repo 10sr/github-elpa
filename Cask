@@ -1,6 +1,6 @@
 (source gnu)
 (source melpa)
-(source github-elpa "https://10sr.github.io/github-elpa/elpa")
+(source github-elpa "https://10sr.github.io/github-elpa/elpa/")
 
 (package "github-elpa" "0.0.1" "Github Elpa")
 
