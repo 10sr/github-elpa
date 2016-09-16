@@ -84,8 +84,8 @@ If not throw error."
          (expand-file-name github-elpa-archive-dir))
         (package-build-recipes-dir
          (expand-file-name github-elpa-recipes-dir)))
-    (github-elpa--git-check-repo)
-    (github-elpa--git-check-workdir-clean)
+    ;;(github-elpa--git-check-repo)
+    ;;(github-elpa--git-check-workdir-clean)
     (make-directory package-build-archive-dir t)
     (package-build-all)))
 
