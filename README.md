@@ -114,6 +114,39 @@ in the same way as first building the repository:
 Command-Line Arguments
 ----------------------
 
+### Subcommands
+
+    github-elpa update
+
+If you just wanto to do "all", issue `update`.
+
+Actually this is just a combination of the following `build` and
+`commit` subcommands.
+
+
+    github-elpa build
+
+Issue `build` to only update packages without committing them.
+This command reads recipes in `recipes/` (or the directory specified
+by `-r` optiion), fetches packages and builds them by recipes.
+In short, this command is just a thin wrapper around
+`package-build.el`.
+
+
+    github-elpa commit
+
+`commit` subcommand commit packages to git repository.
+This command will git-commit files in `docs/elpa/` (or the directory
+ given by `-a`), and do not commit any other files.
+
+
+### Options
+
+| Option                            | Default                | Description |
+| --------------------------------- | ---------------------- | ----------- |
+| `-r, --recipes-dir <recipes-dir>` | `recipes`              | Specify directory that contains recipe files |
+| `-a, --archive-dir <archive-dir>` | `docs/elpa`            | Specify directory in which to keep compiled archives |
+| `-w, --working-dir <working-dir>` | `.github-elpa-working` | Specify directory in which to keep checkouts |
 
 
 
