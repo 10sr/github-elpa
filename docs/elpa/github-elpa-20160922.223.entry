@@ -1,0 +1,2 @@
+
+(github-elpa . [(20160922 223) ((package-build (0)) (commander (0 7 0)) (git (0 1 1))) "Build and publish ELPA repositories with GitHub Pages" tar ((:url . "https://github.com/10sr/github-elpa"))])
