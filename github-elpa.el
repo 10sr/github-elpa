@@ -44,7 +44,7 @@
 (require 'git)
 
 (defvar github-elpa-working-dir
-  "./github-elpa-working")
+  "./.github-elpa-working")
 
 (defvar github-elpa-archive-dir
   "./docs/elpa")
