@@ -1,0 +1,18 @@
+root = true
+
+[*]
+end_of_line = lf
+
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 80
+
+
+[{*.el,bin/github-elpa}]
+indent_style = space
+
+[LICENSE]
+max_line_length = 70
+
+[recipes/*]
+emacs_mode = emacs-lisp
