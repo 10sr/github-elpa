@@ -153,4 +153,4 @@ This command will git-commit files in `docs/elpa/` (or the directory
 License
 -------
 
-This software is licensed under GPLv3. See `LICENSE` for details.
+This software is unlicensed. See `LICENSE` for details.
