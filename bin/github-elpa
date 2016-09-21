@@ -1,8 +1,8 @@
 #!/bin/sh
 :;#-*-Emacs-Lisp-*-
 
-:;test -n "$EMACS_BIN" || EMACS_BIN=emacs
-:;exec "$EMACS_BIN" -batch -Q --eval '(setq debug-on-error t)' -l "$0" -- "$@"
+:;test -n "$EMACS" || EMACS=emacs
+:;exec "$EMACS" -batch -Q --eval '(setq debug-on-error t)' -l "$0" -- "$@"
 
 ;;; github-elpa --- WIP
 
