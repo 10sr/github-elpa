@@ -2,7 +2,7 @@
 :;#-*-Emacs-Lisp-*-
 
 :;test -n "$EMACS" || EMACS=emacs
-:;exec "$EMACS" -batch -Q --eval '(setq debug-on-error t)' -l "$0" -- "$@"
+:;exec "$EMACS" -batch -Q -l "$0" -- "$@"
 
 ;;; github-elpa --- WIP
 
