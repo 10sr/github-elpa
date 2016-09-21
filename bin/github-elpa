@@ -2,6 +2,7 @@
 :;#-*-Emacs-Lisp-*-
 
 :;test -n "$EMACS" || EMACS=emacs
+:;test -n "$CASK_EMACS" && EMACS=$CASK_EMACS
 :;exec "$EMACS" -batch -Q -l "$0" -- "$@"
 
 ;;; github-elpa --- WIP
