@@ -1,4 +1,4 @@
-;;; github-elpa.el --- WIP
+;;; github-elpa.el --- Build and publish ELPA repositories with GitHub Pages
 
 ;; Copyright (C) 2016 10sr
 

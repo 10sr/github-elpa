@@ -5,7 +5,7 @@
 :;test -n "$CASK_EMACS" && EMACS=$CASK_EMACS
 :;exec "$EMACS" -batch -Q -l "$0" -- "$@"
 
-;;; github-elpa --- WIP
+;;; github-elpa --- Build and publish ELPA repositories with GitHub Pages
 
 ;; Copyright (C) 2016 10sr
 
