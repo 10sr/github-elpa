@@ -5,7 +5,7 @@
 ;; Author: 10sr<8slashes+el@gmail.com>
 ;; URL: https://github.com/10sr/github-elpa
 ;; Version: 0.0.1
-;; Package-Requires: ((package-build "0") (commander "0.7.0") (git "0.1.1"))
+;; Package-Requires: ((package-build "1.0") (commander "0.7.0") (git "0.1.1"))
 
 ;; This file is not part of GNU Emacs.
 
