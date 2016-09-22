@@ -105,6 +105,8 @@ If not throw error."
          (expand-file-name github-elpa-archive-dir))
         (package-build-recipes-dir
          (expand-file-name github-elpa-recipes-dir)))
+    (messsage "github-elpa: Commit packages in %s"
+              package-build-archive-dir)
     (github-elpa--git-check-repo)
     (github-elpa--git-commit-archives)))
 
