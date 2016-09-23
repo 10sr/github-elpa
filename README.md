@@ -1,3 +1,8 @@
+[![MELPA](http://melpa.org/packages/github-elpa-badge.svg)](http://melpa.org/#/github-elpa)
+[![MELPA Stable](http://stable.melpa.org/packages/github-elpa-badge.svg)](http://stable.melpa.org/#/github-elpa)
+
+
+
 github-elpa
 ===========
 
