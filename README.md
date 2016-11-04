@@ -34,14 +34,14 @@ This section describes how to setup your ELPA repository in your
 GitHub repository.
 
 
-### 1. Prerequisite
+### 0 Prerequisite
 
 * A GitHub account, and a GitHub respository that you have a
   write-permission and can change `Settings`
 * [Cask](https://github.com/cask/cask)
 
 
-### 2. Prepare Cask File
+### 1 Prepare Cask File
 
 Put `Cask` file to the root of the GitHub repository.  Typically it
 should look like:
@@ -52,15 +52,13 @@ should look like:
     (depends-on "github-elpa")
 
 
-### 3. Add Recipes
+### 2. Add Recipes and Build Archives
 
 Add recipe files in
 [MELPA's format](https://github.com/melpa/melpa#recipe-format).
 By default `github-elpa` looks for `recipes/` directory, but you can
 change this via `-r` command-line option (see below).
 
-
-### 4. Build Archive
 
 Once you put your recipe files, it is time to build your repository!
 
@@ -74,7 +72,7 @@ The second command will fetch packages described in `recipes/`, build
 archives into `docs/elpa`, and git-commit them.
 
 
-### 5. Change Repository Setting
+### 3. Change Repository Setting
 
 After you push `docs/` directory, you need to change the GitHub
 repository setting.
@@ -92,7 +90,7 @@ accessed as a GitHub Pages.
   ![source.png](docs/source.png)
 
 
-### 6. Add to Repository List
+### Add to Your Repository List
 
 Now it's all done!
 
@@ -107,7 +105,7 @@ following to your `init.el`:
 
 
 
-### 7. Update Repository
+### Update Repository
 
 When package upstreams are updated, you can receive the changes
 in the same way as first building the repository:
