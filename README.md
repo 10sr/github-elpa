@@ -34,14 +34,14 @@ This section describes how to setup your ELPA repository in your
 GitHub repository.
 
 
-### 0 Prerequisite
+### 0. Prerequisite
 
 * A GitHub account, and a GitHub respository that you have a
   write-permission and can change `Settings`
 * [Cask](https://github.com/cask/cask)
 
 
-### 1 Prepare Cask File
+### 1. Prepare Cask File
 
 Put `Cask` file to the root of the GitHub repository.  Typically it
 should look like:
@@ -90,9 +90,15 @@ accessed as a GitHub Pages.
   ![source.png](docs/source.png)
 
 
+Now it's all done!
+
+
+
+Use and Maintainance
+--------------------
+
 ### Add to Your Repository List
 
-Now it's all done!
 
 The published ELPA repository URL is
 `https://<username>.github.io/<repository>/elpa/`.
