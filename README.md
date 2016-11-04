@@ -123,11 +123,11 @@ in the same way as first building the repository:
 Command-Line Arguments
 ----------------------
 
-### Subcommands
+### Sub-Commands
 
     github-elpa update
 
-If you just wanto to do "all", issue `update`.
+If you just want to do "all", issue `update`.
 
 Actually this is just a combination of the following `build` and
 `commit` subcommands.
