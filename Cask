@@ -8,4 +8,6 @@
 (files :defaults "bin")
 
 (development
- (depends-on "github-elpa"))
+ (depends-on "package-build")
+ (depends-on "commander")
+ (depends-on "git"))
