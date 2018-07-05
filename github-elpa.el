@@ -96,7 +96,8 @@ If not throw error."
     (make-directory package-build-archive-dir t)
     ;; Currently no way to detect build failure...
     (dolist (recipe (directory-files package-build-recipes-dir nil "^[^.]"))
-      (package-build-archive recipe))))
+      (package-build-archive recipe))
+    (package-build-cleanup)))
 
 ;;;###autoload
 (defun github-elpa-commit ()
