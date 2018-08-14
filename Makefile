@@ -1,9 +1,11 @@
-project_root := $(PWD)
+project_root := $(CURDIR)
 
 cask_install_path := $(project_root)/cask-repository
 
 emacs ?= emacs
-cask ?= CASK_EMACS=$(emacs) $(cask_install_path)/bin/cask
+cask ?= CASK_EMACS=$(emacs) \
+	EMACSLOADPATH=$(project_root):$(EMACSLOADPATH) \
+	$(cask_install_path)/bin/cask
 casked_emacs := $(cask) emacs
 git ?= git
 markdown ?= markdown
@@ -54,7 +56,7 @@ info: $(el)
 
 
 elpa:
-	$(cask) exec github-elpa update
+	$(cask) exec bin/github-elpa update
 
 
 ##############################

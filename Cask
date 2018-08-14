@@ -10,4 +10,5 @@
 (development
  (depends-on "package-build")
  (depends-on "commander")
- (depends-on "git"))
+ (depends-on "git")
+ )
