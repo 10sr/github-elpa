@@ -96,6 +96,8 @@ If not throw error."
     (make-directory package-build-archive-dir t)
     ;; Currently no way to detect build failure...
     (dolist (recipe (directory-files package-build-recipes-dir nil "^[^.]"))
+      (message "")
+      (message ":: github-elpa: packaggin recipe $s" recipe)
       (package-build-archive recipe))
     (package-build-cleanup)))
 
@@ -108,7 +110,7 @@ If not throw error."
          (expand-file-name github-elpa-archive-dir))
         (package-build-recipes-dir
          (expand-file-name github-elpa-recipes-dir)))
-    (message "github-elpa: Commit packages in %s"
+    (message ":: github-elpa: Commit packages in %s"
               package-build-archive-dir)
     (github-elpa--git-check-repo)
     (github-elpa--git-commit-archives)))
