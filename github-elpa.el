@@ -97,7 +97,8 @@ If not throw error."
     ;; Currently no way to detect build failure...
     (dolist (recipe (directory-files package-build-recipes-dir nil "^[^.]"))
       (message "")
-      (message ":: github-elpa: packaggin recipe $s" recipe)
+      (message "")
+      (message ":: github-elpa: packaging recipe %s" recipe)
       (package-build-archive recipe))
     (package-build-cleanup)))
 
