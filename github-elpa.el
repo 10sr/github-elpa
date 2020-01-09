@@ -59,6 +59,9 @@
 (defvar github-elpa-recipes-dir
   "./recipes")
 
+(defvar github-elpa-tar-executable
+  nil)
+
 (defun github-elpa--git-check-repo ()
   "Check if current directory is git toplevel directory.
 If not throw error."
@@ -99,7 +102,9 @@ If not throw error."
       (message "")
       (message "")
       (message ":: github-elpa: packaging recipe %s" recipe)
-      (package-build-archive recipe))
+      (let ((package-build-tar-executable (or github-elpa-tar-executable
+                                              package-build-tar-executable)))
+        (package-build-archive recipe)))
     (package-build-cleanup)))
 
 ;;;###autoload

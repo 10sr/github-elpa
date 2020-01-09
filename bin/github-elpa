@@ -80,6 +80,10 @@
   "Set directory that contains recipe files to ARG."
   (setq github-elpa-recipes-dir arg))
 
+(defun github-elpa-bin-set-tar-executable (arg)
+  "Set tar executable name to ARG."
+  (setq github-elpa-tar-executable arg))
+
 
 (commander
  (name "github-elpa")
@@ -97,6 +101,8 @@
          github-elpa-bin-set-archive-dir)
  (option "--recipes-dir <recipes-dir>, -r <recipes-dir>"
          github-elpa-bin-set-recipes-dir)
+ (option "--tar <tar-executable>, -r <tar-executable>"
+         github-elpa-bin-set-tar-executable)
  )
 
 ;;; github-elpa ends here
