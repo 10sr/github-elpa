@@ -89,6 +89,7 @@
  (name "github-elpa")
  (description "Your own ELPA archive in GitHub page")
  (default commander-print-usage-and-exit)
+ (option "--help, -h" "Show usage information and exit" commander-print-usage-and-exit)
 
  (command "update" "Update elpa repository" github-elpa-bin-update)
  (command "build" "Update elpa archives without committing them"
