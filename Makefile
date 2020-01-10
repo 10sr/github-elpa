@@ -58,6 +58,9 @@ info: $(el)
 elpa:
 	$(cask) exec bin/github-elpa update
 
+args ?=
+run:
+	$(cask) exec bin/github-elpa $(args)
 
 ##############################
 
