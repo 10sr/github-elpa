@@ -96,13 +96,13 @@
           github-elpa-bin-build)
  (command "commit" "Commit elpa archives" github-elpa-bin-commmit)
 
- (option "--working-dir <working-dir>, -r <working-dir>"
+ (option "--working-dir <working-dir>, -w <working-dir>"
          github-elpa-bin-set-working-dir)
- (option "--archive-dir <archive-dir>, -r <archive-dir>"
+ (option "--archive-dir <archive-dir>, -a <archive-dir>"
          github-elpa-bin-set-archive-dir)
  (option "--recipes-dir <recipes-dir>, -r <recipes-dir>"
          github-elpa-bin-set-recipes-dir)
- (option "--tar <tar-executable>, -r <tar-executable>"
+ (option "--tar <tar-executable>, -t <tar-executable>"
          github-elpa-bin-set-tar-executable)
  )
 
