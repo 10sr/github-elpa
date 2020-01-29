@@ -156,6 +156,7 @@ This command will git-commit files in `docs/elpa/` (or the directory
 | `-r, --recipes-dir <recipes-dir>` | `recipes`              | Specify directory that contains recipe files |
 | `-a, --archive-dir <archive-dir>` | `docs/elpa`            | Specify directory in which to keep compiled archives |
 | `-w, --working-dir <working-dir>` | `.github-elpa-working` | Specify directory in which to keep checkouts |
+| `-t, --tar <tar-executable>`      | (Use value from `package-build.el`) | Specify tar executable name to archive files |
 
 
 
