@@ -104,7 +104,7 @@ If not throw error."
       (message ":: github-elpa: packaging recipe %s" recipe)
       (let ((package-build-tar-executable (or github-elpa-tar-executable
                                               package-build-tar-executable)))
-        (package-build-archive recipe)))
+        (ignore-errors (package-build-archive recipe))))
     (package-build-cleanup)))
 
 ;;;###autoload
@@ -117,7 +117,7 @@ If not throw error."
         (package-build-recipes-dir
          (expand-file-name github-elpa-recipes-dir)))
     (message ":: github-elpa: Commit packages in %s"
-              package-build-archive-dir)
+             package-build-archive-dir)
     (github-elpa--git-check-repo)
     (github-elpa--git-commit-archives)))
 
