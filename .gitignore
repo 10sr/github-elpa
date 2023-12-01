@@ -3,10 +3,11 @@
 
 # Packaging
 .cask
+.eask
 
 # github-elpa
 .github-elpa-working/
 
 # Cask repository
-
+dist/
 cask-repository/

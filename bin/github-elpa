@@ -94,7 +94,7 @@
  (command "update" "Update elpa repository" github-elpa-bin-update)
  (command "build" "Update elpa archives without committing them"
           github-elpa-bin-build)
- (command "commit" "Commit elpa archives" github-elpa-bin-commmit)
+ (command "commit" "Commit elpa archives" github-elpa-bin-commit)
 
  (option "--working-dir <working-dir>, -w <working-dir>"
          github-elpa-bin-set-working-dir)
