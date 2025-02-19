@@ -31,9 +31,9 @@ GitHub repository.
 
 * A GitHub account, and a GitHub respository that you have a
   write-permission and can change `Settings`
-* [Cask](https://github.com/cask/cask) or [Eask](https://github.com/emacs-eask/cli)
+* [Cask][] or [Eask][]
 
-### 1. Prepare Cask/Eask File
+### 1. Prepare Cask File
 
 Put `Cask` file to the root of the GitHub repository.  Typically it
 should look like:
@@ -74,13 +74,23 @@ Once you put your recipe files, it is time to build your repository!
 
 Issue following commands:
 
-    cask install  # Need only once
-    cask exec github-elpa update
-    git push
+```sh
+cask install  # Need only once
+cask exec github-elpa update
+git push
+```
 
 The second command will fetch packages described in `recipes/`, build
 archives into `docs/elpa`, and git-commit them.
 
+
+In Eask:
+
+```sh
+eask install-deps  # Need only once
+eask exec github-elpa update
+git push
+```
 
 ### 3. Change Repository Setting
 
@@ -176,3 +186,9 @@ License
 -------
 
 This software is unlicensed. See `LICENSE` for details.
+
+
+<!-- Links -->
+
+[Cask]: https://github.com/cask/cask
+[Eask]: https://github.com/emacs-eask/cli
