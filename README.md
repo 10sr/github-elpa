@@ -17,7 +17,7 @@ so by just pushing it to GitHub you can publish the repository with
 GitHub Pages.
 
 Setting up a repository and updating packages are really easy.
-Once you add a [`Cask`](https://github.com/cask/cask) file and package
+Once you add a [`Cask`][Cask]/[`Eask`][Eask] file and package
 recipes in
 [MELPA's format](https://github.com/melpa/melpa#recipe-format),
 issue just one simple command to update the ELPA repository.
@@ -34,7 +34,7 @@ GitHub repository.
   write-permission and can change `Settings`
 * [Cask][] or [Eask][]
 
-### 1. Prepare Cask File
+### 1. Prepare Cask/Eask File
 
 Put `Cask` file to the root of the GitHub repository.  Typically it
 should look like:
@@ -135,8 +135,17 @@ following to your `init.el`:
 When package upstreams are updated, you can receive the changes
 in the same way as first building the repository:
 
-    cask exec github-elpa update
-    git push
+```sh
+cask exec github-elpa update
+git push
+```
+
+In Eask:
+
+```sh
+eask exec github-elpa update
+git push
+```
 
 
 Command-Line Arguments
