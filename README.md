@@ -1,14 +1,10 @@
 [![MELPA](http://melpa.org/packages/github-elpa-badge.svg)](http://melpa.org/#/github-elpa)
 [![MELPA Stable](http://stable.melpa.org/packages/github-elpa-badge.svg)](http://stable.melpa.org/#/github-elpa)
 
-
-
 github-elpa
 ===========
 
 Build and publish your own ELPA repositories with GitHub Pages
-
-
 
 Overview
 --------
@@ -25,32 +21,46 @@ recipes in
 [MELPA's format](https://github.com/melpa/melpa#recipe-format),
 issue just one simple command to update the ELPA repository.
 
-
-
 Quick Start
 -----------
 
 This section describes how to setup your ELPA repository in your
 GitHub repository.
 
-
 ### 0. Prerequisite
 
 * A GitHub account, and a GitHub respository that you have a
   write-permission and can change `Settings`
-* [Cask](https://github.com/cask/cask)
+* [Cask](https://github.com/cask/cask) or [Eask](https://github.com/emacs-eask/cli)
 
-
-### 1. Prepare Cask File
+### 1. Prepare Cask/Eask File
 
 Put `Cask` file to the root of the GitHub repository.  Typically it
 should look like:
 
-    (source gnu)
-    (source melpa)
+```elisp
+(source gnu)
+(source melpa)
 
-    (depends-on "github-elpa")
+(depends-on "github-elpa")
+```
 
+Or `Eask` file,
+
+```elisp
+(source 'gnu)
+(source 'melpa)
+
+(depends-on "github-elpa")
+```
+
+#### [RECOMMENDED] Use Eask to generate the ELPA project
+
+Execute the following command to generate the ELPA project.
+
+```sh
+eask create elpa <elpa-name>
+```
 
 ### 2. Add Recipes and Build Archives
 
@@ -93,23 +103,21 @@ accessed as a GitHub Pages.
 Now it's all done!
 
 
-
 Use and Maintainance
 --------------------
 
 ### Add to Your Repository List
-
 
 The published ELPA repository URL is
 `https://<username>.github.io/<repository>/elpa/`.
 For example, to use the repository of `github-elpa` itself, add
 following to your `init.el`:
 
-    (setq package-archives
-          `(,@package-archives
-            ("github-elpa" . "https://10sr.github.io/github-elpa/elpa/")))
-
-
+```elisp
+(setq package-archives
+      `(,@package-archives
+        ("github-elpa" . "https://10sr.github.io/github-elpa/elpa/")))
+```
 
 ### Update Repository
 
@@ -159,6 +167,10 @@ This command will git-commit files in `docs/elpa/` (or the directory
 | `-t, --tar <tar-executable>`      | (Use value from `package-build.el`) | Specify tar executable name to archive files |
 
 
+Example
+-------
+
+- [JCS-ELPA](https://github.com/jcs-emacs/jcs-elpa)
 
 License
 -------
