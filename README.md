@@ -1,5 +1,6 @@
 [![MELPA](http://melpa.org/packages/github-elpa-badge.svg)](http://melpa.org/#/github-elpa)
 [![MELPA Stable](http://stable.melpa.org/packages/github-elpa-badge.svg)](http://stable.melpa.org/#/github-elpa)
+[![JCS-ELPA](https://raw.githubusercontent.com/jcs-emacs/badges/master/elpa/v/github-elpa.svg)](https://jcs-emacs.github.io/jcs-elpa/#/github-elpa)
 
 github-elpa
 ===========
