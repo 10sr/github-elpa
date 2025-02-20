@@ -187,11 +187,6 @@ This command will git-commit files in `docs/elpa/` (or the directory
 | `-t, --tar <tar-executable>`      | (Use value from `package-build.el`) | Specify tar executable name to archive files |
 
 
-Example
--------
-
-- [JCS-ELPA](https://github.com/jcs-emacs/jcs-elpa)
-
 License
 -------
 
