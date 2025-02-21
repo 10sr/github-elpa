@@ -1,14 +1,11 @@
 [![MELPA](http://melpa.org/packages/github-elpa-badge.svg)](http://melpa.org/#/github-elpa)
 [![MELPA Stable](http://stable.melpa.org/packages/github-elpa-badge.svg)](http://stable.melpa.org/#/github-elpa)
-
-
+[![JCS-ELPA](https://raw.githubusercontent.com/jcs-emacs/badges/master/elpa/v/github-elpa.svg)](https://jcs-emacs.github.io/jcs-elpa/#/github-elpa)
 
 github-elpa
 ===========
 
 Build and publish your own ELPA repositories with GitHub Pages
-
-
 
 Overview
 --------
@@ -20,12 +17,10 @@ so by just pushing it to GitHub you can publish the repository with
 GitHub Pages.
 
 Setting up a repository and updating packages are really easy.
-Once you add a [`Cask`](https://github.com/cask/cask) file and package
+Once you add a [`Cask`][Cask]/[`Eask`][Eask] file and package
 recipes in
 [MELPA's format](https://github.com/melpa/melpa#recipe-format),
 issue just one simple command to update the ELPA repository.
-
-
 
 Quick Start
 -----------
@@ -33,24 +28,40 @@ Quick Start
 This section describes how to setup your ELPA repository in your
 GitHub repository.
 
-
 ### 0. Prerequisite
 
 * A GitHub account, and a GitHub respository that you have a
   write-permission and can change `Settings`
-* [Cask](https://github.com/cask/cask)
+* [Cask][] or [Eask][]
 
-
-### 1. Prepare Cask File
+### 1. Prepare Cask/Eask File
 
 Put `Cask` file to the root of the GitHub repository.  Typically it
 should look like:
 
-    (source gnu)
-    (source melpa)
+```elisp
+(source gnu)
+(source melpa)
 
-    (depends-on "github-elpa")
+(depends-on "github-elpa")
+```
 
+Or `Eask` file,
+
+```elisp
+(source 'gnu)
+(source 'melpa)
+
+(depends-on "github-elpa")
+```
+
+#### [RECOMMENDED] Use Eask to generate the ELPA project
+
+Execute the following command to generate the ELPA project.
+
+```sh
+eask create elpa <elpa-name>
+```
 
 ### 2. Add Recipes and Build Archives
 
@@ -64,13 +75,23 @@ Once you put your recipe files, it is time to build your repository!
 
 Issue following commands:
 
-    cask install  # Need only once
-    cask exec github-elpa update
-    git push
+```sh
+cask install  # Need only once
+cask exec github-elpa update
+git push
+```
 
 The second command will fetch packages described in `recipes/`, build
 archives into `docs/elpa`, and git-commit them.
 
+
+In Eask:
+
+```sh
+eask install-deps  # Need only once
+eask exec github-elpa update
+git push
+```
 
 ### 3. Change Repository Setting
 
@@ -93,31 +114,38 @@ accessed as a GitHub Pages.
 Now it's all done!
 
 
-
 Use and Maintainance
 --------------------
 
 ### Add to Your Repository List
-
 
 The published ELPA repository URL is
 `https://<username>.github.io/<repository>/elpa/`.
 For example, to use the repository of `github-elpa` itself, add
 following to your `init.el`:
 
-    (setq package-archives
-          `(,@package-archives
-            ("github-elpa" . "https://10sr.github.io/github-elpa/elpa/")))
-
-
+```elisp
+(setq package-archives
+      `(,@package-archives
+        ("github-elpa" . "https://10sr.github.io/github-elpa/elpa/")))
+```
 
 ### Update Repository
 
 When package upstreams are updated, you can receive the changes
 in the same way as first building the repository:
 
-    cask exec github-elpa update
-    git push
+```sh
+cask exec github-elpa update
+git push
+```
+
+In Eask:
+
+```sh
+eask exec github-elpa update
+git push
+```
 
 
 Command-Line Arguments
@@ -159,8 +187,13 @@ This command will git-commit files in `docs/elpa/` (or the directory
 | `-t, --tar <tar-executable>`      | (Use value from `package-build.el`) | Specify tar executable name to archive files |
 
 
-
 License
 -------
 
 This software is unlicensed. See `LICENSE` for details.
+
+
+<!-- Links -->
+
+[Cask]: https://github.com/cask/cask
+[Eask]: https://github.com/emacs-eask/cli
