@@ -125,9 +125,7 @@ For example, to use the repository of `github-elpa` itself, add
 following to your `init.el`:
 
 ```elisp
-(setq package-archives
-      `(,@package-archives
-        ("github-elpa" . "https://10sr.github.io/github-elpa/elpa/")))
+(add-to-list 'package-archives '("github-elpa" . "https://10sr.github.io/github-elpa/elpa/"))
 ```
 
 ### Update Repository
