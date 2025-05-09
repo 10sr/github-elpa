@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "github-elpa" "0.0.1" "Build and publish ELPA repositories with GitHub Pages")
 
 (website-url "https://github.com/10sr/github-elpa")
